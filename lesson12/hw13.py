@@ -66,7 +66,7 @@ class AddressBook(UserDict):
         for value in values:
             for number in value[0]:
                 if number.lower().startswith(pattern.lower()):
-                    result += f"{value.lower()}\n"
+                    result += f"{number.lower()}\n"
         return result
        
             
