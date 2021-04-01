@@ -62,11 +62,11 @@ class AddressBook(UserDict):
         result = ""
         for key in keys:
             if key.lower().startswith(pattern.lower()):
-                result += f"{keys[keys.index(key)]}:{self.data[keys[keys.index(key)]]}\n"
-        for value in values:
-            for number in value[0]:
+                result += f"{keys[keys.index(key)]}:{self.data[keys[keys.index(key)]][0]}\n"
+        for key, item in self.data.items():
+            for number in item[0]:
                 if number.lower().startswith(pattern.lower()):
-                    result += f"{number.lower()}\n"
+                    result += f"{keys[keys.index(key)]}:{self.data[keys[keys.index(key)]][0]}\n"
         return result
        
             
