@@ -17,7 +17,11 @@ def log(action):
         file.write(f'{message}\n')
 
 
-class AbstractBot(ABC)
+class AbstractBot(ABC):
+    
+    @abstractmethod
+    def handle(self, action):
+        pass
 
 
 class BotInterface:
